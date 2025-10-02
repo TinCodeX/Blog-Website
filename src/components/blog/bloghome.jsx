@@ -10,9 +10,11 @@ const BlogHome = () => {
             paraTwo:"New Ways to Wear Denim Belt Bags make a Comeback",
             name:"By Jasmin Smith",
             subTitle:"How to Shop Mindfully",
-            qrCode:"C:\Users\bizra\OneDrive\Desktop\Big Project\blog website\src\components\blog\Embrace Your Style 15 Unique Hairstyles for Afro Hair.jpg",
-            cover:"download (2).jpg"
-           
+            //qrCode:`${process.env.PUBLIC_URL}/images/Embrace Your Style 15 Unique Hairstyles for Afro Hair.jpg`,
+            ///cover:`${process.env.PUBLIC_URL}/images/download (2).jpg`,
+            qrCode: '/images/Embrace Your Style 15 Unique Hairstyles for Afro Hair.jpg',
+            cover: '/images/download (2).jpg'
+
         },
     ]
   return (
@@ -27,7 +29,7 @@ const BlogHome = () => {
                             <h1>M</h1>
                         </div>
                         <div className="home-img">
-                            <img src={value.cover} alt="" />
+                            <img src={value.cover} alt="cover" />
                         </div>
                         <div className="text">
                             <h1>
@@ -43,7 +45,10 @@ const BlogHome = () => {
                             <p>{value.paraTwo}</p>
                             <span>{value.subTitle}</span>
                         </div>
-                        
+                        <div className="qrcode">
+                            <img src={value.qrCode} alt="QR code" />
+
+                        </div>
                         </div>
                     )
                 })
